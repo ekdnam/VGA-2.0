@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<time.h>
+#include<windows.h>
 int main()
 {
     printf("\n                  *VGA DIGITAL PRINTERS PVT. LTD.*");
@@ -53,7 +54,7 @@ int main()
 	{
     	printf("\n\n       Nett cash paid : %d", -tcrec);
 	}
-	else
+	else if(tcrec>0)
 	{
     	printf("\n\n    Nett cash received : %d", tcrec);
 	}
@@ -76,6 +77,19 @@ int main()
 	scanf("%d",&a2t);
 	printf("\n                   Number of Rs.10 notes   : ");
 	scanf("%d",&a1t);
+	
+	system("CLS");
+	system("COLOR E");
+    printf("\n\tLOADING YOUR RECORD ... \n");
+    for(i=0;i<=100;i++)
+	{
+        printf("%c",219);
+        Sleep(50);
+    }
+    Sleep(2000);
+    system("CLS");
+	system("COLOR 7");
+	
 	//now printing values
 		printf("\n\n\n                  DENOMINATION       NOTES  AMOUNT");
 		printf("\n\n                       2000		 %d	 %d	 ",a2k,2000*a2k);
@@ -94,13 +108,21 @@ int main()
     bal = total - pcash;
     if(bal>0)
     {
-        printf("\n\n                   Excess cash  =  %d/-",bal);
+        system("COLOR C");//console color turns red if error in tally.
+		printf("\n\n                   Excess cash  =  %d/-",bal);
     }
-	else
+	else if(bal<0)
     {
-	    bal = -bal;
+	    system("COLOR C");//console color turns red if error in tally.
+		bal = -bal;
     	printf("\n\n                   Short cash  =  (-) %d/-",bal);
     }
+    else
+    {
+    	system("COLOR A");//console color turns green if no error in tally.
+		printf("\n\n                   - No Errors in Tally. Funds Checked, All OK. -");
+		printf("\n\n                   - Have A Nice Day, %s . Goodbye. -\n\n",name);
+	}
 
 	return 0;
 }
