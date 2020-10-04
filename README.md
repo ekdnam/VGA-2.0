@@ -1,9 +1,9 @@
 # VGA-2.0
 A simple CLI application to handle business at the reception counter of a company. Created in 2018 as a mini-project.
 
-By - [Aditya Mandke](github.com/ekdnam)
+By - [Aditya Mandke](https://github.com/ekdnam)
 
-Minor Modifications - [Dhruv Kanekal](github.com/DK770)
+Minor Modifications - [Dhruv Kanekal](https://github.com/DK770)
 
 ### Points to Check :-
 
