@@ -124,5 +124,9 @@ int main()
 		printf("\n\n                   - Have A Nice Day, %s . Goodbye. -\n\n",name);
 	}
 
+	printf("Enter any character to exit: ");
+	char c;
+	scanf("%c", c);
+	
 	return 0;
 }
